@@ -40,7 +40,7 @@ export default function FeaturesSection() {
           {features.map((feature, index) => (
             <ScrollAnimate key={index} delay={feature.delay}>
               <Card className="h-full text-center shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden group border-border/50 bg-card/50 backdrop-blur-sm">
-                 <div className="absolute -inset-2 bg-gradient-to-br from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl animate-pulse"></div>
+                 <div className="absolute -inset-2 bg-gradient-to-br from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl"></div>
                 <CardHeader className="items-center relative">
                   <div className="mb-4 rounded-full bg-primary/20 p-4 shadow-lg border border-primary/50 group-hover:bg-primary group-hover:[&>svg]:text-primary-foreground transition-colors duration-300">
                     {feature.icon}
