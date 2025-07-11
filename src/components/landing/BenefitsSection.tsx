@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Award, Zap, Smile } from 'lucide-react';
 import ScrollAnimate from './ScrollAnimate';
@@ -46,12 +47,11 @@ export default function BenefitsSection() {
         <div className="grid items-center gap-12 md:grid-cols-2">
           <ScrollAnimate>
             <Image
-              src="https://placehold.co/800x800.png"
-              alt="Happy people in an office breakroom"
+              src="/images/snackHiveOffice.webp"
+              alt="Modern office space with a SnackHives vending machine"
               width={800}
               height={800}
               className="rounded-xl shadow-2xl"
-              data-ai-hint="office breakroom"
             />
           </ScrollAnimate>
           <div className="flex flex-col gap-8">

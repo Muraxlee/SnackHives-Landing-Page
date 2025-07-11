@@ -67,7 +67,7 @@ export default function HeroSection() {
           >
             <div className="absolute -inset-16 bg-primary/30 rounded-full blur-3xl opacity-40"></div>
             <Image
-              src="/vending-michin.png"
+              src="/images/vendingmichin.png"
               alt="SnackHives Vending Machine"
               width={600}
               height={600}
