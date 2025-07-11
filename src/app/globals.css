@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    --background: 25 33% 95%; /* Light Beige */
-    --foreground: 24 9.8% 10%; /* Almost Black */
-    --card: 25 33% 98%;
-    --card-foreground: 24 9.8% 10%;
-    --popover: 25 33% 98%;
-    --popover-foreground: 24 9.8% 10%;
-    --primary: 30 43% 35%; /* Rich Brown */
-    --primary-foreground: 48 100% 95%;
-    --secondary: 48 100% 90%; /* Light Honey */
-    --secondary-foreground: 30 43% 20%;
-    --muted: 25 20% 90%;
-    --muted-foreground: 25 5.3% 44.7%;
+    --background: 0 0% 100%; /* White */
+    --foreground: 240 10% 3.9%; /* Almost Black */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%; /* Cool Gray */
+    --primary-foreground: 0 0% 98%; /* Light Gray for text on primary */
+    --secondary: 240 4.8% 95.9%; /* Lighter Gray */
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
     --accent: 48 96% 59%; /* Honey Yellow */
     --accent-foreground: 24 9.8% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 25 20% 85%;
-    --input: 25 20% 85%;
-    --ring: 48 96% 59%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 216 10% 10%; /* eerie-black-2 */
-    --foreground: 29 19% 72%; /* dun */
-    --card: 200 8% 15%; /* eerie-black */
-    --card-foreground: 29 19% 72%; /* dun */
-    --popover: 216 10% 10%; /* eerie-black-2 */
-    --popover-foreground: 29 19% 72%; /* dun */
-    --primary: 44 93% 67%; /* mustard */
-    --primary-foreground: 216 10% 10%; /* eerie-black-2 */
-    --secondary: 36 51% 51%; /* dark-goldenrod */
-    --secondary-foreground: 216 10% 10%; /* eerie-black-2 */
-    --muted: 200 8% 20%;
-    --muted-foreground: 29 19% 65%;
-    --accent: 36 51% 51%; /* dark-goldenrod */
-    --accent-foreground: 216 10% 10%;
+    --background: 240 10% 3.9%; /* Almost Black */
+    --foreground: 0 0% 98%; /* Light Gray */
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%; /* Light Gray for primary elements */
+    --primary-foreground: 240 5.9% 10%; /* Almost black text on primary */
+    --secondary: 240 3.7% 15.9%; /* Darker Gray */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 48 96% 59%; /* Honey Yellow */
+    --accent-foreground: 24 9.8% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 200 8% 20%;
-    --input: 200 8% 20%;
-    --ring: 44 93% 67%; /* mustard */
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 0 0% 98%;
   }
 }
 
