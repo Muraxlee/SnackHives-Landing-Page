@@ -67,7 +67,7 @@ export default function HeroSection() {
           >
             <div className="absolute -inset-16 bg-primary/30 rounded-full blur-3xl opacity-40"></div>
             <Image
-              src="https://placehold.co/600x600.png"
+              src="/vending-michin.png"
               alt="SnackHives Vending Machine"
               width={600}
               height={600}
@@ -75,7 +75,6 @@ export default function HeroSection() {
                 "object-contain transition-all duration-1000 ease-out drop-shadow-[0_25px_25px_rgba(0,0,0,0.5)]",
                 inView ? "opacity-100 scale-100" : "opacity-0 scale-90"
               )}
-              data-ai-hint="vending machine"
               priority
             />
           </div>
