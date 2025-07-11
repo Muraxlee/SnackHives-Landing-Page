@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { CheckCircle2, Award, Zap, Smile } from 'lucide-react';
+import { Award, Zap, Smile } from 'lucide-react';
 import ScrollAnimate from './ScrollAnimate';
 import Counter from './Counter';
 
@@ -35,7 +35,7 @@ export default function BenefitsSection() {
     <section id="benefits" className="py-24 bg-secondary/30">
       <div className="container">
         <ScrollAnimate className="text-center mb-16">
-          <h2 className="font-headline text-5xl tracking-wider md:text-6xl">
+          <h2 className="font-headline text-5xl tracking-wider md:text-6xl animate-blur-in">
             A Sweet Deal For Your Space
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">

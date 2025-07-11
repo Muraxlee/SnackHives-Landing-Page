@@ -55,7 +55,7 @@ export default function TestimonialsSection() {
       <div className="container">
         <ScrollAnimate>
           <div className="mb-16 text-center">
-            <h2 className="font-headline text-5xl tracking-wider md:text-6xl">
+            <h2 className="font-headline text-5xl tracking-wider md:text-6xl animate-blur-in">
               Loved by Our Partners
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">

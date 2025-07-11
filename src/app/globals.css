@@ -60,3 +60,39 @@
     background-image: radial-gradient(circle at top, hsl(var(--background)) 0%, hsl(var(--background)) 50%, hsl(216 10% 8%) 100%);
   }
 }
+
+@layer utilities {
+  .animate-blur-in {
+    animation: blur-in 1s forwards;
+  }
+  .animate-reveal {
+    animation: reveal 0.8s forwards;
+  }
+  
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+}
+
+
+@keyframes blur-in {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes reveal {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -29,7 +29,7 @@ export default function FeaturesSection() {
       <div className="container">
         <ScrollAnimate>
           <div className="mb-16 text-center">
-            <h2 className="font-headline text-5xl tracking-wider md:text-6xl">Why SnackHives?</h2>
+            <h2 className="font-headline text-5xl tracking-wider md:text-6xl animate-blur-in">Why SnackHives?</h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
               We're not just a vending machine. We're a technology-driven snack experience
               designed for modern spaces.

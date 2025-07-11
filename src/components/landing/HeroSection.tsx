@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { cn } from '@/lib/utils';
+import AnimatedText from './AnimatedText';
 
 export default function HeroSection() {
   const [scrollY, setScrollY] = useState(0);
@@ -36,8 +37,10 @@ export default function HeroSection() {
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}>
           <h1 className="font-headline text-6xl tracking-wider md:text-7xl lg:text-8xl">
-            Smart Snacking, <br />
-            <span className="text-primary [text-shadow:0_0_15px_hsl(var(--primary))]">Simplified.</span>
+            <AnimatedText text="Smart Snacking," inView={inView} />
+            <span className="text-primary [text-shadow:0_0_15px_hsl(var(--primary))]">
+              <AnimatedText text="Simplified." inView={inView} delay={2} />
+            </span>
           </h1>
           <p className="mx-auto max-w-md text-lg text-muted-foreground md:mx-0">
             Discover SnackHives, the future of automated retail. Our intelligent vending machines
