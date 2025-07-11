@@ -27,25 +27,25 @@
   }
 
   .dark {
-    --background: 24 10% 10%; /* Dark Brown */
-    --foreground: 0 0% 98%;
-    --card: 24 10% 15%;
-    --card-foreground: 0 0% 98%;
-    --popover: 24 10% 10%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 48 96% 59%; /* Honey Yellow */
-    --primary-foreground: 24 9.8% 10%;
-    --secondary: 30 20% 12%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 30 20% 17%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 30 43% 35%; /* Rich Brown */
-    --accent-foreground: 0 0% 98%;
+    --background: 216 10% 10%; /* eerie-black-2 */
+    --foreground: 29 19% 72%; /* dun */
+    --card: 200 8% 15%; /* eerie-black */
+    --card-foreground: 29 19% 72%; /* dun */
+    --popover: 216 10% 10%; /* eerie-black-2 */
+    --popover-foreground: 29 19% 72%; /* dun */
+    --primary: 44 93% 67%; /* mustard */
+    --primary-foreground: 216 10% 10%; /* eerie-black-2 */
+    --secondary: 36 51% 51%; /* dark-goldenrod */
+    --secondary-foreground: 216 10% 10%; /* eerie-black-2 */
+    --muted: 200 8% 20%;
+    --muted-foreground: 29 19% 65%;
+    --accent: 36 51% 51%; /* dark-goldenrod */
+    --accent-foreground: 216 10% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 30 20% 20%;
-    --input: 30 20% 20%;
-    --ring: 48 96% 59%;
+    --border: 200 8% 20%;
+    --input: 200 8% 20%;
+    --ring: 44 93% 67%; /* mustard */
   }
 }
 
