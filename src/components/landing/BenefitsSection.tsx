@@ -1,45 +1,74 @@
 import Image from 'next/image';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Award, Zap, Smile } from 'lucide-react';
 import ScrollAnimate from './ScrollAnimate';
+import Counter from './Counter';
 
 const benefits = [
-  'Boost employee morale and productivity.',
-  'Modernize your office, lobby, or waiting area.',
-  'Zero cost and hassle for your business.',
-  '24/7 access to delicious snacks and drinks.',
+  {
+    icon: <Award className="h-8 w-8 text-primary" />,
+    title: 'Premium Experience',
+    description: 'Modernize your office, lobby, or waiting area with a sleek, high-tech vending solution.',
+    metric: 40,
+    suffix: '%',
+    metricDescription: 'Increase in perceived workplace quality.',
+  },
+  {
+    icon: <Smile className="h-8 w-8 text-primary" />,
+    title: 'Boost Morale',
+    description: 'Boost employee morale and productivity with 24/7 access to delicious snacks and drinks.',
+    metric: 60,
+    suffix: '%',
+    metricDescription: 'Reported happiness increase.',
+  },
+  {
+    icon: <Zap className="h-8 w-8 text-primary" />,
+    title: 'Zero Hassle',
+    description: 'Enjoy a fully-managed service at zero cost to your business. We handle everything.',
+    metric: 100,
+    suffix: '%',
+    metricDescription: 'Hassle-free for you.',
+  },
 ];
 
 export default function BenefitsSection() {
   return (
-    <section id="benefits" className="py-20">
-      <div className="container grid items-center gap-12 md:grid-cols-2">
-        <ScrollAnimate>
-          <Image
-            src="https://placehold.co/800x600.png"
-            alt="Happy people in an office breakroom"
-            width={800}
-            height={600}
-            className="rounded-lg shadow-2xl"
-            data-ai-hint="office breakroom"
-          />
+    <section id="benefits" className="py-24 bg-secondary/30">
+      <div className="container">
+        <ScrollAnimate className="text-center mb-16">
+          <h2 className="font-headline text-5xl tracking-wider md:text-6xl">
+            A Sweet Deal For Your Space
+          </h2>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+            Elevate your environment with a SnackHives machine. It's a simple, powerful way to
+            enhance any location and show you care.
+          </p>
         </ScrollAnimate>
-        <div className="flex flex-col gap-6">
+        <div className="grid items-center gap-12 md:grid-cols-2">
           <ScrollAnimate>
-            <h2 className="font-headline text-5xl tracking-wider md:text-6xl">
-              A Sweet Deal For Your Space
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Elevate your environment with a SnackHives machine. It's a simple, powerful way to
-              enhance any location.
-            </p>
+            <Image
+              src="https://placehold.co/800x800.png"
+              alt="Happy people in an office breakroom"
+              width={800}
+              height={800}
+              className="rounded-xl shadow-2xl"
+              data-ai-hint="office breakroom"
+            />
           </ScrollAnimate>
-          <ul className="mt-4 space-y-4">
+          <div className="flex flex-col gap-8">
             {benefits.map((benefit, index) => (
-              <ScrollAnimate key={index} delay={`delay-${index * 100}`}>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-1 h-6 w-6 flex-shrink-0 text-primary" />
-                  <span className="text-muted-foreground">{benefit}</span>
-                </li>
+              <ScrollAnimate key={index} delay={`delay-${index * 150}`}>
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 mt-1">{benefit.icon}</div>
+                  <div className="flex-grow">
+                    <h3 className="font-bold text-xl text-foreground">{benefit.title}</h3>
+                    <p className="text-muted-foreground mt-1 mb-2">{benefit.description}</p>
+                    <div className="flex items-baseline gap-2 font-headline tracking-wider text-primary">
+                      <Counter end={benefit.metric} className="text-4xl" />
+                      <span className="text-3xl">{benefit.suffix}</span>
+                      <p className="text-sm font-body text-muted-foreground ml-2">{benefit.metricDescription}</p>
+                    </div>
+                  </div>
+                </div>
               </ScrollAnimate>
             ))}
           </ul>

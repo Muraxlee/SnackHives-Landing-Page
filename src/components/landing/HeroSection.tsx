@@ -4,9 +4,15 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useInView } from 'react-intersection-observer';
+import { cn } from '@/lib/utils';
 
 export default function HeroSection() {
   const [scrollY, setScrollY] = useState(0);
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,10 +26,15 @@ export default function HeroSection() {
     <section
       id="hero"
       className="relative w-full flex min-h-screen items-center justify-center overflow-hidden"
+      ref={ref}
     >
-      <div className="container grid items-center gap-8 py-20 md:grid-cols-2">
-        <div className="flex flex-col gap-6 text-center md:text-left">
-          <h1 className="font-headline text-5xl tracking-wider md:text-7xl lg:text-8xl">
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-secondary/30"></div>
+      <div className="container grid items-center gap-8 py-20 md:grid-cols-2 z-10">
+        <div className={cn(
+            "flex flex-col gap-6 text-center md:text-left transition-all duration-1000",
+            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          )}>
+          <h1 className="font-headline text-6xl tracking-wider md:text-7xl lg:text-8xl">
             Smart Snacking, <br />
             <span className="text-primary">Simplified.</span>
           </h1>
@@ -32,7 +43,7 @@ export default function HeroSection() {
             bring premium snacks and drinks right where you need them.
           </p>
           <div className="flex justify-center gap-4 md:justify-start">
-            <Button size="lg">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               Get a Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -44,14 +55,21 @@ export default function HeroSection() {
         <div className="relative flex h-[400px] items-center justify-center md:h-[600px]">
           <div
             className="absolute inset-0 transition-transform duration-300 ease-out"
-            style={{ transform: `translateY(${scrollY * 0.1}px) scale(1.1)` }}
+            style={{ 
+              transform: `translateY(${scrollY * 0.1}px) rotateY(${scrollY * 0.05}deg) scale(1.1)`,
+              transformStyle: 'preserve-3d',
+              perspective: '1000px',
+            }}
           >
             <Image
               src="https://placehold.co/600x600.png"
               alt="SnackHives Vending Machine"
               width={600}
               height={600}
-              className="object-contain"
+              className={cn(
+                "object-contain transition-all duration-1000 ease-out",
+                inView ? "opacity-100 scale-100" : "opacity-0 scale-90"
+              )}
               data-ai-hint="vending machine"
               priority
             />
