@@ -71,7 +71,7 @@ export default function BenefitsSection() {
                 </div>
               </ScrollAnimate>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </section>
