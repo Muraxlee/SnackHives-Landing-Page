@@ -1,3 +1,4 @@
+// src/components/landing/HeroSection.tsx
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -28,7 +29,7 @@ export default function HeroSection() {
       className="relative w-full flex min-h-screen items-center justify-center overflow-hidden"
       ref={ref}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-secondary/30"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/50 z-0"></div>
       <div className="container grid items-center gap-8 py-20 md:grid-cols-2 z-10">
         <div className={cn(
             "flex flex-col gap-6 text-center md:text-left transition-all duration-1000",
@@ -36,14 +37,14 @@ export default function HeroSection() {
           )}>
           <h1 className="font-headline text-6xl tracking-wider md:text-7xl lg:text-8xl">
             Smart Snacking, <br />
-            <span className="text-primary">Simplified.</span>
+            <span className="text-primary [text-shadow:0_0_15px_hsl(var(--primary))]">Simplified.</span>
           </h1>
           <p className="mx-auto max-w-md text-lg text-muted-foreground md:mx-0">
             Discover SnackHives, the future of automated retail. Our intelligent vending machines
             bring premium snacks and drinks right where you need them.
           </p>
           <div className="flex justify-center gap-4 md:justify-start">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button size="lg" className="bg-primary text-primary-foreground shadow-[0_0_20px_hsl(var(--primary)/0.8)] transition-all hover:bg-primary/90 hover:shadow-[0_0_30px_hsl(var(--primary)/0.9)]">
               Get a Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -61,13 +62,14 @@ export default function HeroSection() {
               perspective: '1000px',
             }}
           >
+            <div className="absolute -inset-16 bg-primary/30 rounded-full blur-3xl opacity-40"></div>
             <Image
               src="https://placehold.co/600x600.png"
               alt="SnackHives Vending Machine"
               width={600}
               height={600}
               className={cn(
-                "object-contain transition-all duration-1000 ease-out",
+                "object-contain transition-all duration-1000 ease-out drop-shadow-[0_25px_25px_rgba(0,0,0,0.5)]",
                 inView ? "opacity-100 scale-100" : "opacity-0 scale-90"
               )}
               data-ai-hint="vending machine"

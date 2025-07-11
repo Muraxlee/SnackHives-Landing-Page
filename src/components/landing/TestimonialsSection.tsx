@@ -9,7 +9,7 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel';
 import Autoplay from "embla-carousel-autoplay";
-import { Star, BotMessageSquare } from 'lucide-react';
+import { Star } from 'lucide-react';
 import ScrollAnimate from './ScrollAnimate';
 
 const testimonials = [
@@ -51,7 +51,7 @@ export default function TestimonialsSection() {
   )
 
   return (
-    <section id="testimonials" className="py-24 bg-background">
+    <section id="testimonials" className="py-24 bg-background/30">
       <div className="container">
         <ScrollAnimate>
           <div className="mb-16 text-center">
@@ -78,11 +78,11 @@ export default function TestimonialsSection() {
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1 h-full">
-                    <Card className="h-full flex flex-col justify-between shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <Card className="h-full flex flex-col justify-between shadow-lg hover:shadow-primary/20 hover:border-primary/50 transition-all duration-300 bg-card/50 border-border/50">
                       <CardContent className="p-6 flex flex-col gap-4 items-center text-center">
                         <div className="flex">
                             {[...Array(testimonial.rating)].map((_, i) => (
-                                <Star key={i} className="h-5 w-5 text-accent fill-accent" />
+                                <Star key={i} className="h-5 w-5 text-primary fill-primary" />
                             ))}
                         </div>
                         <p className="text-muted-foreground italic">"{testimonial.quote}"</p>

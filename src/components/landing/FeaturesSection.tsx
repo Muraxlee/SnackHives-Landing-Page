@@ -4,19 +4,19 @@ import ScrollAnimate from './ScrollAnimate';
 
 const features = [
   {
-    icon: <Cookie className="h-10 w-10 text-accent-foreground" />,
+    icon: <Cookie className="h-10 w-10 text-primary" />,
     title: 'Curated Selections',
     description: 'A wide variety of premium, healthy, and classic snacks to satisfy any craving.',
     delay: 'delay-0',
   },
   {
-    icon: <Zap className="h-10 w-10 text-accent-foreground" />,
+    icon: <Zap className="h-10 w-10 text-primary" />,
     title: 'Effortless Payments',
     description: 'Seamless transactions with tap-to-pay, mobile wallets, and credit/debit cards.',
     delay: 'delay-200',
   },
   {
-    icon: <Smartphone className="h-10 w-10 text-accent-foreground" />,
+    icon: <Smartphone className="h-10 w-10 text-primary" />,
     title: 'Smart Inventory',
     description: 'Real-time monitoring ensures your favorite items are always in stock when you need them.',
     delay: 'delay-400',
@@ -25,7 +25,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section id="features" className="bg-secondary/50 py-24">
+    <section id="features" className="py-24 bg-background/50">
       <div className="container">
         <ScrollAnimate>
           <div className="mb-16 text-center">
@@ -39,10 +39,10 @@ export default function FeaturesSection() {
         <div className="grid gap-8 md:grid-cols-3">
           {features.map((feature, index) => (
             <ScrollAnimate key={index} delay={feature.delay}>
-              <Card className="h-full text-center shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden group">
-                 <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl"></div>
+              <Card className="h-full text-center shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 relative overflow-hidden group border-border/50 bg-card/50 backdrop-blur-sm">
+                 <div className="absolute -inset-2 bg-gradient-to-br from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl animate-pulse"></div>
                 <CardHeader className="items-center relative">
-                  <div className="mb-4 rounded-full bg-accent p-4 shadow-lg">
+                  <div className="mb-4 rounded-full bg-primary/20 p-4 shadow-lg border border-primary/50 group-hover:bg-primary group-hover:[&>svg]:text-primary-foreground transition-colors duration-300">
                     {feature.icon}
                   </div>
                   <CardTitle className="font-headline text-3xl tracking-wide">
