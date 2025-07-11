@@ -10,19 +10,19 @@
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%; /* Cool Gray */
-    --primary-foreground: 0 0% 98%; /* Light Gray for text on primary */
+    --primary: 48 96% 59%; /* Honey Yellow */
+    --primary-foreground: 24 9.8% 10%; /* Dark text for contrast */
     --secondary: 240 4.8% 95.9%; /* Lighter Gray */
     --secondary-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
-    --accent: 48 96% 59%; /* Honey Yellow */
-    --accent-foreground: 24 9.8% 10%;
+    --accent: 240 5.9% 10%; /* Cool Gray */
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --ring: 48 96% 59%;
     --radius: 0.5rem;
   }
 
@@ -33,19 +33,19 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%; /* Light Gray for primary elements */
-    --primary-foreground: 240 5.9% 10%; /* Almost black text on primary */
+    --primary: 48 96% 59%; /* Honey Yellow */
+    --primary-foreground: 24 9.8% 10%; /* Dark text for contrast */
     --secondary: 240 3.7% 15.9%; /* Darker Gray */
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 48 96% 59%; /* Honey Yellow */
-    --accent-foreground: 24 9.8% 10%;
+    --accent: 0 0% 98%; /* Light Gray for accent */
+    --accent-foreground: 240 5.9% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 0 0% 98%;
+    --ring: 48 96% 59%;
   }
 }
 
